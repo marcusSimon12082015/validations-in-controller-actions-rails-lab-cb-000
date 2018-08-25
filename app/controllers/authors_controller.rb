@@ -8,6 +8,7 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.create!(author_params)
+    byebug
     if @author.valid?
       redirect_to author_path(@author)
     else 
